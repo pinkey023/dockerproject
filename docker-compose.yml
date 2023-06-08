@@ -3,14 +3,14 @@ services:
   devops:
     image: niroopa12/devops1-repo:latest
     ports:
-      - "90:80"
+      - "93:80"
     deploy:
       replicas: 3
 
   aws:
     image: niroopa12/aws2-repo:latest
     ports:
-      - "91:80"
+      - "94:80"
     deploy:
       replicas: 3
 
@@ -18,6 +18,6 @@ services:
   azure:
     image: niroopa12/azure3-repo:latest
     ports:
-      - "92:80"
+      - "95:80"
     deploy:
       replicas: 3
