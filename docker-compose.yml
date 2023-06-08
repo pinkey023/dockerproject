@@ -18,6 +18,6 @@ services:
   azure:
     image: niroopa12/azure3-repo:latest
     ports:
-      - "93:80"
+      - "92:80"
     deploy:
       replicas: 3
