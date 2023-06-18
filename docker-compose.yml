@@ -3,14 +3,18 @@ services:
   trans:
     image: niroopa12/phonpay1-trans:latest
     ports:
-      - "93:80"
+      - "90:80"
+    volumes:
+      - "trans-vol"
     deploy:
       replicas: 3
 
   recharge:
     image: niroopa12/phonpay1-recharge:latest
     ports:
-      - "94:80"
+      - "91:80"
+    volumes:
+      - "rech-vol"
     deploy:
       replicas: 3
 
@@ -18,6 +22,8 @@ services:
   dth:
     image: niroopa12/phonpay1-dth:latest
     ports:
-      - "95:80"
+      - "92:80"
+    volumes:
+      - "dth-vol"
     deploy:
       replicas: 3
