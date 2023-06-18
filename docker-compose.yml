@@ -1,13 +1,13 @@
 version: '3'
 services:
-  devops:
+  trans:
     image: niroopa12/phonpay1-trans:latest
     ports:
       - "90:80"
     deploy:
       replicas: 3
 
-  aws:
+  recharge:
     image: niroopa12/phonpay1-recharge:latest
     ports:
       - "91:80"
@@ -15,7 +15,7 @@ services:
       replicas: 3
 
 
-  azure:
+  dth:
     image: niroopa12/phonpay1-dth:latest
     ports:
       - "92:80"
