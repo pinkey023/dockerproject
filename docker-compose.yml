@@ -1,7 +1,7 @@
 version: '3'
 services:
   cart:
-    image: cart:v1
+    image: cart1:v1
     ports:
       - "90:80"
     volumes:
