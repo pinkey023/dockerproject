@@ -1,29 +1,14 @@
 version: '3'
 services:
-  trans:
-    image: niroopa12/phonpay1-trans:latest
+  cart:
+    image: cart:v1
     ports:
-      - "93:80"
-    volumes:
-      - "trans-vol"
-    deploy:
-      replicas: 3
-
-  recharge:
-    image: niroopa12/phonpay1-recharge:latest
+      - "80:80"
+  order:
+    image: order:v1
     ports:
-      - "94:80"
-    volumes:
-      - "rech-vol"
-    deploy:
-      replicas: 3
-
-
-  dth:
-    image: niroopa12/phonpay1-dth:latest
+      - "81:80"
+  delivery:
+    image: delivery:v1
     ports:
-      - "95:80"
-    volumes:
-      - "dth-vol"
-    deploy:
-      replicas: 3
+      - "82:80"
