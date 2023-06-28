@@ -1,0 +1,33 @@
+
+ pipeline {
+    agent any 
+    
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/pinkey023/dockerproject.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'docker build -t $img .'
+            }
+        }
+        stage('tag') {
+            steps {
+                sh 'docker tag $img $repo'
+            }
+        }
+        stage('push') {
+            steps {
+                sh 'docker login -u niroopa12 -p Pinkey123@'
+                sh 'docker push $repo'
+            }
+        }
+        stage('stack'){
+            steps{
+                sh 'docker stack deploy -c docker-compose.yml flipkart-services'
+            }
+        }
+    }
+}
