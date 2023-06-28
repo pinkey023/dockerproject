@@ -3,12 +3,12 @@ services:
   cart:
     image: cart:v1
     ports:
-      - "80:80"
+      - "90:80"
   order:
     image: order:v1
     ports:
-      - "81:80"
+      - "91:80"
   delivery:
     image: delivery:v1
     ports:
-      - "82:80"
+      - "92:80"
