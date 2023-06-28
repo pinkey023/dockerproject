@@ -4,11 +4,17 @@ services:
     image: cart:v1
     ports:
       - "90:80"
+    volumes:
+      - "cartvol"
   order:
     image: order:v1
     ports:
       - "91:80"
+    volumes:
+      - "ordrvol"
   delivery:
     image: delivery:v1
     ports:
       - "92:80"
+    volumes:
+      - "delvol"
